@@ -1,8 +1,4 @@
 #functions go here
-
-# from urllib import response
-
-
 def  yes_no(question):
     
     valid = False
@@ -30,10 +26,14 @@ def instructions():
     print()
     return ""
 
-
+def num_check(question, low, high):
 #Main routine goes here
-played_before = yes_no("Have you played this game before? ")
+    played_before = yes_no("Have you played this game before? ")
 
-if played_before == "no":
-    instructions()
+    if played_before == "no":
+        instructions()
     print("Program Continues")
+
+how_much = num_check("How much would you like to play with ? ", 0, 10,)
+
+print("You will be spending ${}".format(how_much)) 
