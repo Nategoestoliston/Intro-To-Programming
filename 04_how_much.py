@@ -1,14 +1,17 @@
 from urllib import response
 
 
-error = "Please enter an whole number between 1 and 10"
+error = "Please enter an whole number between 1 and 10\n"
 
 valid = False
 while not valid:
-    response = int(input("How much would you like to play with? "))
+    try:
+        response = int(input("How much would you like to play with? "))
 
-    if 0 < response <= 10:
-        print("You have asked to play with ${}".format(response))
+        if 0 < response <= 10:
+            print("You have asked to play with ${}".format(response))
 
-    else:
+        else:
+            print(error)
+    except ValueError:
         print(error)
