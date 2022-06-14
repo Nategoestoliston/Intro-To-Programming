@@ -34,5 +34,4 @@ def num_check(question, low, high):
     print("Program Continues")
 
 how_much = num_check("How much would you like to play with ? ", 0, 10,)
-
 print("You will be spending ${}".format(how_much)) 
