@@ -1,6 +1,7 @@
 #functions go here
 def  yes_no(question):
     
+    
     valid = False
     while not valid:
         response = input(question).lower()
@@ -26,15 +27,29 @@ def instructions():
     return ""
 
 def num_check(question, low, high):
-#Main routine goes here
-    played_before = yes_no("Have you played this game before? ")
+    error = "Please enter an whole number between 1 and 10\n"
 
-    if played_before == "no":
+    valid = False
+    while not valid:
+        try:
+            response = int(input(question))
+            
+            if low < response <= high:
+               return response
+            
+            else:
+                print(error)
+        
+        except ValueError:
+            print(error) 
+#Main routine goes here
+played_before = yes_no("Have you played this game before? ")
+if played_before == "no":
         instructions()
-    print("Program Continues")
+        print("Program Continues")
 
 #Main routine goes here
-played_before = yes_no("Have you played the game before? ")
+        played_before = yes_no("Have you played the game before? ")
 
 if played_before == "no":
     instructions()
