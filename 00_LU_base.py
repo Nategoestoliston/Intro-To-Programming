@@ -18,7 +18,6 @@ def  yes_no(question):
         else:   
             print("Please answer yes / no")
 
-
 def instructions():
     print("***** How to play *****")
     print()
