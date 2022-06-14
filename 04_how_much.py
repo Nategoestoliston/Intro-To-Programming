@@ -14,4 +14,4 @@ def num_check(question, low, high):
         except ValueError:
             print(error)
 
-how_much = num_check("How much would you like to play with ? ", 0, 10)
+how_much = num_check("How much would you like to play with ?")
