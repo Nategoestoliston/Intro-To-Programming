@@ -1,11 +1,14 @@
 import random
 
 #main routine goes here
-tokens = ["unicorn", "horse", "zebra", "donkey"]
-balance = 100
+tokens = ["unicorn", "horse", "horse", "horse",
+          "zebra", "zebra", "zebra", 
+          "donkey", "donkey", "donkey"]
+STARTING_BALANCE = 100
 
+balance = STARTING_BALANCE
 #Testing loops to generate 20 tokens
-for item in range ( 0, 20):
+for item in range ( 0, 500):
     chosen = random.choice(tokens)
     # print(chosen, end='\t')
 
@@ -15,3 +18,7 @@ for item in range ( 0, 20):
         balance -= 1
     else :
         balance -=0.5
+
+print()
+print("Starting Balance: ${:.2f}".format(STARTING_BALANCE))
+print("Final Balance: ${:.2f}". format(balance))
