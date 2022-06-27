@@ -22,8 +22,9 @@ for item in range ( 0, 10):
         else :
             chosen = "zebra"
         balance -=0.5
-        print()
+    print("You got a {}. Your balance is ${:.2f}".format(chosen, balance))
+
+print()
+
 print("Starting Balance: ${:.2f}".format(STARTING_BALANCE))
 print("Final Balance: ${:.2f}". format(balance))
-print("You got a {}. Your balance is ${:.2f}".format(chosen, balance))
-print()
