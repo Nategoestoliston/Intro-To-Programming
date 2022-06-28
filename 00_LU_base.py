@@ -22,9 +22,12 @@ def  yes_no(question):
 
 def instructions():
     print("***** How to play *****")
-    print()
-    print("The rules of the game go here")
-    print()
+    print("Choose a stating amount (minimum $1 , maximum $10). Then press <enter> to play. You will get either a horse, a zebra, a donkey or unicorn.")
+    print("It costs $1 per round. Depending on your prize you might win some money back. Here's the pay out amounts")
+    print("Unicorn: $5.00 (balance increases by $4)")
+    print("Horse: $0.50 (balance increases by $0.50)")
+    print("Zebra: $0.50 (balance increases by $0.50)")
+    print("Donkey: $0 (balance decreases by $1)")
     return ""
 
 def num_check(question, low, high):
@@ -43,8 +46,23 @@ def num_check(question, low, high):
         
         except ValueError:
             print(error) 
+
+def statement_generator(statement, decoration) :
+
+    sides = decoration * 3
+
+    statement = "{} {} {}".format(sides, statement, sides)
+    top_bottom = decoration * len(statement)
+
+    print(top_bottom)
+    print(statement)
+    print(top_bottom)
+
+    return ""
+
 #Main routine goes here
 played_before = yes_no("Have you played this game before? ")
+
 if played_before == "no":
         instructions()
         print("Program Continues")
@@ -52,6 +70,7 @@ if played_before == "no":
 #ask user how much they will play with
 how_much = num_check("How much would you like to play with ? ", 0, 10,)
 print("You will be spending ${}".format(how_much))
+
 balance = how_much
 
 round_played = 0
