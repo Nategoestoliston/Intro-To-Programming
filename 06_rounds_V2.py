@@ -9,9 +9,9 @@ while play_again == "":
 
     round_played += 1
 
-    print("*** Round #{} ***".format(round_played))
     print()
-
+    print("*** Round #{} ***".format(round_played))
+    
     chosen_num = random.randint(1, 100)
     # print(chosen, end='\t')
 
@@ -27,6 +27,7 @@ while play_again == "":
         else :
             chosen = "zebra"
         balance -=0.5
+    print("You got a {}. Your balance is ${:.2f}".format(chosen, balance))
 
     if balance < 1:
         play_again = "xxx"
