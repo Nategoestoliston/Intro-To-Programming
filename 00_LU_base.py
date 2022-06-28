@@ -102,6 +102,8 @@ while play_again == "":
 
     if balance < 1:
         play_again = "xxx"
+        print("Final Balance: ${:.2f}". format(balance))
         print("Sorry you have run out of money")
+        print("Thank you for playing")
     else:
         play_again = input("Press Enter to play again or XXX to quit") 
