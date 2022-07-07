@@ -23,5 +23,5 @@ rps_list = ["rock", "paper", "scissors", "xxx"]
 
 user_choice = ""
 while user_choice != "xxx":
-    user_choice = choice_checker("Choose rock / paper / scissors (r/p/s) :", rps_list, "Please choose from rock / paper / scissors" )
+    user_choice = choice_checker ("Choose rock / paper / scissors (r/p/s) :", rps_list, "Please choose from rock / paper / scissors (or xxx to quit")
     print("you chose {}".format(user_choice))
