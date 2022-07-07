@@ -3,7 +3,7 @@ def check_rounds():
     while True:
         response = input("How many rounds: ")
 
-        round_error = "Please type either <enter>  \ or an integer that is more than 0"
+        round_error = "Please type either <enter> or an integer that is more than 0"
         if response != "":
             try:
                 response = int(response)
@@ -22,15 +22,17 @@ choose_instruction = "Please choose rock (r), paper (p), scissors (s)"
 rounds = check_rounds()
 
 end_game = "no"
-while end_game =="no":
+while end_game == "no":
     print()
     if rounds == "":
         heading = "Continuons mode : Round {}".format(rounds_played + 1)
 
     else :
         heading = "Round {} of {}".format(rounds_played + 1, rounds)
-    print(heading)
+        print(heading)
+
     choose = input("{} or 'xxx' to end: ".format(choose_instruction))
+    print("You choose {}".format(choose))
 
     if choose == "xxx":
         break
