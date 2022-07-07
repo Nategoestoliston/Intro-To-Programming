@@ -16,10 +16,10 @@ def check_rounds():
                 print(round_error)
                 continue
         return response
-
+def choice_checker(question, valid_list, error) :
 #Main routine goes here
 
-#Lists of valid response
+# Lists of valid response
 yes_no_list = ["yes", "no"]
 rps_list = ["rock", "paper", "scissors", "xxx"]
 
@@ -41,8 +41,10 @@ while end_game =="no":
     else :
         heading = "Round {} of {}".format(rounds_played + 1, rounds)
     print(heading)
-    choose = input("{} or 'xxx' to end: ".format(choose_instruction))
-    print("You choose {}".format(choose))
+    choose_instruction = "Please choose from rock (r), paper (p), scissors (s) or xxx to quit"
+    choose_error = "Please choose from rock, paper, scissors (or xxx to quit)"
+
+    choose = choice_checker(choose_instruction, rps_list, choose_error) 
 
     if choose == "xxx":
         break
